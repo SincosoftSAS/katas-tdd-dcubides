@@ -10,6 +10,8 @@ namespace FizzBuzz
             {
                 if (i % 15 == 0)
                     numbers.Add("FizzBuzz");
+                else if (i % 3 == 0)
+                    numbers.Add("Fizz");
                 else
                     numbers.Add(i.ToString());
             }
