@@ -46,7 +46,7 @@ namespace FizzBuzz.Tests
             
             //Assert
             result.Should().HaveCount(5);
-            result[2].Should().Be("Buzz");
+            result[4].Should().Be("Buzz");
         }
     }
 }
