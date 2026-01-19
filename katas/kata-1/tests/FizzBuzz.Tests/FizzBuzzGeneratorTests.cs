@@ -26,5 +26,16 @@ namespace FizzBuzz.Tests
             result.Should().HaveCount(15);
             result[14].Should().Be("FizzBuzz");
         }
+
+        [Fact]
+        public void Generate_WhitThree_ReturnListWhitFizz()
+        {
+            //Arrange & act
+            var result = FizzBuzzGenerator.Generate(3);
+            
+            //Assert
+            result.Should().HaveCount(3);
+            result[2].Should().Be("Fizz");
+        }
     }
 }
