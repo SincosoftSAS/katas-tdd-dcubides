@@ -4,21 +4,22 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            List<string> numbers = new List<string>();
+            var numbers = new List<string>(count);
 
             for (int i = 1; i <= count; i++)
             {
-                if (i % 15 == 0)
-                    numbers.Add("FizzBuzz");
-                else if (i % 3 == 0)
-                    numbers.Add("Fizz");
-                else if (i % 5 == 0)
-                    numbers.Add("Buzz");
-                else
-                    numbers.Add(i.ToString());
+                numbers.Add(GetFizzBuzzValue(i));
             }
-            
+    
             return numbers;
+        }
+
+        private static string GetFizzBuzzValue(int number)
+        {
+            if (number % 15 == 0) return "FizzBuzz";
+            if (number % 3 == 0) return "Fizz";
+            if (number % 5 == 0) return "Buzz";
+            return number.ToString();
         }
     }
 }
