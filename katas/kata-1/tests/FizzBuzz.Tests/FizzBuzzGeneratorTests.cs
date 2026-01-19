@@ -60,6 +60,18 @@ namespace FizzBuzz.Tests
             result.Should().BeEmpty();
             result.Should().NotBeNull().And.BeEmpty();
         }
+
+        [Fact]
+        public void Generate_WithTwo_ReturnsListWithOneTwo()
+        {
+            //Arrange & act
+            var result = FizzBuzzGenerator.Generate(2);
+            
+            //Assert
+            result.Should().HaveCount(2);
+            result[0].Should().Be("1");
+            result[1].Should().Be("2");
+        }
         
         
         
