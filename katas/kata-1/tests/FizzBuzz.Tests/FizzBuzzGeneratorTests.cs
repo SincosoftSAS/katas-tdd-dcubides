@@ -20,6 +20,7 @@ namespace FizzBuzz.Tests
         public void Generate_WithFifteen_ReturnsListWithFizzBuzz()
         {
             // Arrange & Act
+            
             var result = FizzBuzzGenerator.Generate(15);
             
             // Assert
