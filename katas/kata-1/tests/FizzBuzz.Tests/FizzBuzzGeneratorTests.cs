@@ -28,7 +28,7 @@ namespace FizzBuzz.Tests
         }
 
         [Fact]
-        public void Generate_WhitThree_ReturnListWhitFizz()
+        public void Generate_WithThree_ReturnListWhitFizz()
         {
             //Arrange & act
             var result = FizzBuzzGenerator.Generate(3);
@@ -39,7 +39,7 @@ namespace FizzBuzz.Tests
         }
 
         [Fact]
-        public void Generate_WhitFive_ReturnListWhitBuzz()
+        public void Generate_WithFive_ReturnListWhitBuzz()
         {
             //Arrange & act
             var result = FizzBuzzGenerator.Generate(5);
@@ -48,5 +48,20 @@ namespace FizzBuzz.Tests
             result.Should().HaveCount(5);
             result[4].Should().Be("Buzz");
         }
+
+        [Fact]
+        public void Generate_WithZero_ReturnListEmpty()
+        {
+            //Arrange & act
+            var result = FizzBuzzGenerator.Generate(0);
+            
+            //Assert
+            result.Should().HaveCount(0);
+            result.Should().BeEmpty();
+            result.Should().NotBeNull().And.BeEmpty();
+        }
+        
+        
+        
     }
 }
